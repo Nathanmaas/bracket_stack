@@ -31,6 +31,36 @@ end
 puts test_brackets('abc(123');
 puts test_brackets('a[bc(12]3)');
 
+# another way
+# def test_brackets str
+#   brackets = {
+#     '{' => '}',
+#     '[' => ']',
+#     '(' => ')'
+#   }
+#   stack = []
+
+#   # good: " abc(d[ef]g)"
+#   # bad: " abc(d[ef)g]"
+#   str.each_char do |char|
+#     if brackets.has_key? char
+#       stack.push brackets[char]
+#     elsif brackets.has_value? char
+#       expected_bracket = stack.pop
+#       return false unless expected_bracket == char
+#     end
+#   end
+
+#   return stack.length == 0
+# end
+
+# running = true
+# while running
+#   print "Enter a string to check brackets: "
+#   input = gets.chomp
+#   break if input.empty?
+#   p test_brackets input
+# end
 
 
 
